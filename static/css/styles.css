@@ -1,0 +1,163 @@
+/* General Styling */
+body {
+  background-color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 1.3em; /* Scaling font size for the entire page */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  background-color: #6a1b9a; /* Darker Purple */
+  color: white;
+  text-align: center;
+  padding: 26px;
+  font-size: 31.2px;
+  font-weight: 600;
+  width: 100%;
+}
+
+/* Container */
+.container {
+  width: 80%;
+  max-width: 700px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Upload Section */
+.upload-container {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#uploaded-image {
+  display: none;
+  margin-top: 26px;
+  max-width: 130%;
+  max-height: 390px;
+  border: 4px solid #ddd;
+  border-radius: 13px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+}
+
+/* Buttons */
+button {
+  background-color: #6a1b9a;
+  color: white;
+  border: none;
+  padding: 16px 40px;
+  border-radius: 65px;
+  cursor: pointer;
+  font-size: 23.4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 13px;
+}
+
+button:hover {
+  background-color: #9c4dcc;
+  transform: translateY(-3px);
+}
+
+button:active {
+  background-color: #4a148c;
+  transform: translateY(3px);
+}
+
+/* Progress Bar */
+#progress-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+progress {
+  width: 80%;
+  height: 25px;
+  margin-top: 10px;
+  border-radius: 10px;
+  -webkit-appearance: none;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #f3f3f3;
+  border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+  background-color: #6a1b9a;
+  border-radius: 10px;
+}
+
+/* Comparison Section */
+#comparison-panel {
+  margin-top: 52px;
+  display: none;
+  text-align: center;
+}
+
+.comparison-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.comparison-container img {
+  width: 250px; /* Set width to 250px */
+  height: 250px; /* Set height to 250px */
+  border: 4px solid #ddd;
+  border-radius: 13px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+}
+
+/* Section Styling */
+section {
+  margin-bottom: 60px;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #6a1b9a;
+}
+
+.comparison-container > div {
+  text-align: center;
+}
+
+#enhance-btn {
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  .comparison-container {
+    flex-direction: column;
+    gap: 26px;
+  }
+
+  .comparison-container img {
+    width: 100%; /* Full width for smaller screens */
+    max-height: 500px;
+  }
+}

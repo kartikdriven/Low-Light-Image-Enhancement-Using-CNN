@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Low Light Image Enhancement</title>
+    <link rel="stylesheet" href="/static/css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Low Light Image Enhancement</h1>
+    </header>
+
+    <div class="container">
+      <!-- Upload Section -->
+      <section id="upload-section">
+        <h2>Upload Your Image</h2>
+        <div class="upload-container">
+          <input type="file" id="image-upload" accept="image/*" />
+          <button onclick="uploadImage()">Upload Image</button>
+        </div>
+
+        <!-- Image Preview Panel -->
+        <div id="image-preview">
+          <img id="uploaded-image" src="" alt="Uploaded Image" />
+        </div>
+
+        <!-- Processing Bar -->
+        <div id="progress-container" style="display: none">
+          <label for="progress-bar">Uploading...</label>
+          <progress id="progress-bar" value="0" max="100"></progress>
+        </div>
+      </section>
+
+      <!-- Enhance Section -->
+      <section id="enhance-section">
+        <div>
+          <button id="enhance-btn" onclick="enhanceImage()">
+            Enhance Image
+          </button>
+        </div>
+      </section>
+
+      <!-- Comparison Section -->
+      <section id="comparison-section">
+        <div id="comparison-panel" style="display: none">
+          <h2>Comparison</h2>
+          <div class="comparison-container">
+            <div>
+              <h3>Original Image</h3>
+              <img id="original-image" src="" alt="Original Image" />
+            </div>
+            <div>
+              <h3>Enhanced Image</h3>
+              <img id="enhanced-image" src="" alt="Enhanced Image" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>
